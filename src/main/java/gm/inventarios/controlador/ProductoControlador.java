@@ -1,7 +1,7 @@
 package gm.inventarios.controlador;
 
 import gm.inventarios.modelo.Producto;
-import gm.inventarios.servicio.ProductoService;
+import gm.inventarios.servicio.ProductoServicio;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,7 +20,7 @@ public class ProductoControlador {
     private static final Logger logger = LoggerFactory.getLogger(ProductoControlador.class);
 
     @Autowired
-    private ProductoService productoServicio;
+    private ProductoServicio productoServicio;
 
     @GetMapping("/productos") // http://localhost:8080/inventario-app/productos
     public List<Producto> obtenerProductos(){
